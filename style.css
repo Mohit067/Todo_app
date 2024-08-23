@@ -1,0 +1,70 @@
+:root{
+    --background-color : #f5f5f5;
+    --btn-primary : #5cabff;
+    --btn-secondary : #cfdd35;
+    --btn-active : #39d7ad;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+}
+ 
+.containor{
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    padding: 20px;
+}
+h1{
+    text-align: center;
+}
+
+#addTotodo{
+    width: 75%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#buttonId{
+    padding: 10px 20px;
+    background: var(--btn-primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+li:hover{
+    background: #ddd;
+}
+li:last-child{
+    border-bottom: none;
+}
+
+.filterButton {
+    margin: 5px;  
+    padding: 10px 15px;
+    background: var(--btn-secondary);
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.filterButton:hover{
+    background: var(--btn-active);
+}
