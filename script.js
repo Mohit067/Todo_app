@@ -65,7 +65,7 @@ function addTodoInHtlm(todo){
     wrapper.classList.add("todoButtons")
 
     const editBtn = document.createElement("button");
-    editBtn.textContent = "edit";
+    editBtn.textContent = "Edit";
     editBtn.classList.add("editBtn");
 
     const deleteBtn = document.createElement("button");
