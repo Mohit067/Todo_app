@@ -67,6 +67,7 @@ function addTodoInHtlm(todo){
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
     editBtn.classList.add("editBtn");
+    editBtn.addEventListener("click", editTodo)
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "delete";
@@ -110,6 +111,21 @@ function toggleTodo(event){
     refreshTodo(todos);
     resetHtmlTodos(todos);
 }
+
+function editTodo(event) {
+    const todoItem = event.target.parentElement.parentElement;
+    const todoId = Number(todoItem.getAttribute("data-id"));
+    let todos = loadTodos();
+    const response = prompt("What is the new todo value you want to set? ");
+    if (response.trim() == "") return;
+    todos.todoList.forEach((todo) => {
+      if (todo.id === todoId) {
+        todo.text = response;
+      }
+    });
+    refreshTodo(todos);
+    resetHtmlTodos(todos);
+  }
 
 function deleteTodo(event){
     const todoItem = event.target.parentElement.parentElement;
